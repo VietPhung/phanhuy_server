@@ -4,7 +4,7 @@ const io = require('socket.io')(process.env.PORT || 3000);
 const arrUserInfo = [];
 
 io.on('connection', socket => {
-    // console.log(socket.id);
+    console.log(socket.id);
 
     socket.on('NGUOI_DUNG_DANG_KY', user => {
         socket.peerId = user.peerId;
